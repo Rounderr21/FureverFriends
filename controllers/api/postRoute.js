@@ -1,12 +1,15 @@
 const router = require("express").Router();
 const { UserPost } = require("../../models");
 const withAuth = require("../../utils/auth");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });//had to be in the database
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", withAuth, upload.single("image"), async (req, res) => {
   try {
     const newUserPost = await UserPost.create({
       ...req.body,
       user_id: req.session.user_id,
+      image: req.file.filename,
     });
 
     res.status(200).json(newUserPost);
