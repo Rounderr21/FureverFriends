@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.bg-pageBg {
+    background-color: #F1F5F9;
+}
+
+.bg-cardBg {
+    background-color: #FFFFFF;
+}
+
+.bg-commentsBg {
+    background-color: #EDEDED;
+}
+
+.text-textColor {
+    color: #1F2937;
+}
+
+.text-headerColor {
+    color: #10B981;
+}
+
+.border-headerBorder {
+    border-color: #10B981;
+}
+
+.bg-actionColor {
+    background-color: #10B981;
+}
+
+.bg-secondaryAction {
+    background-color: #E5E7EB;
+}
