@@ -15,18 +15,11 @@ UserPost.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
+    user_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
       references: {
         model: "user",
-        key: "id",
+        key: "name",
       },
     },
   },
