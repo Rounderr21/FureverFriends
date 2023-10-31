@@ -15,6 +15,13 @@ UserPost.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isUrl: true,
+      },
+    },
     user_name: {
       type: DataTypes.STRING,
       references: {
