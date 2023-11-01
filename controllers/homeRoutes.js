@@ -4,22 +4,32 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const feedData = await Feed.findAll({
       include: [
         {
           model: User,
           attributes: ["name"],
+          include: [ 
+            {
+              model: Pet,
+              attributes: ["name"], 
+            },
+          ],
         },
       ],
     });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const feeds = feedData.map((project) => feed.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
-      projects,
+      feeds,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -27,9 +37,9 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/project/:id", async (req, res) => {
+router.get("/feed/:id", async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const feedData = await FEed.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,10 +48,10 @@ router.get("/project/:id", async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const feeds = feedData.get({ plain: true });
 
-    res.render("project", {
-      ...project,
+    res.render("feed", {
+      ...feeds,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
