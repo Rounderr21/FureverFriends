@@ -30,14 +30,26 @@ User.init(
         len: [8],
       },
     },
+    profilePic: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      comment: 'URL to the profile picture'
+    }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
   }
 );
+
+User.associate = (models) => {
+  User.hasMany(models.Pet, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+  });
+};
 
 module.exports = User;
