@@ -1,3 +1,4 @@
+//put pet up for adoption
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 

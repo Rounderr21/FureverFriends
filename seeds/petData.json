@@ -1,0 +1,13 @@
+{
+    "name": "Fluffy",
+    "species": "cat",
+    "breed": "Persian",
+    "age": 3,
+    "color": "white",
+    "weight": 8,
+    "owner": {
+        "name": "Megan",
+        "email": "megan@example.com",
+        "phone": "555-555-5555"
+    }
+}

@@ -1,3 +1,5 @@
+//should be their profile page, validating login
+
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const User = require("../../models/User");

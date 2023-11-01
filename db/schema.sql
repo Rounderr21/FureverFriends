@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS greensnap_db;
-CREATE DATABASE greensnap_db;
+DROP DATABASE IF EXISTS FureverFriends_db;
+CREATE DATABASE FureverFriends_db;
