@@ -23,13 +23,13 @@ Feed.init(
         isUrl: true,
       },
     },
-    user_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: "user",
-        key: "name",
-      },
-    },
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: "user",
+    //     key: "name",
+    //   },
+    // },
   },
   {
     sequelize,
