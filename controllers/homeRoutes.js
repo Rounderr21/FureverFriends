@@ -4,15 +4,25 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const feedData = await Feed.findAll({
       include: [
         {
           model: User,
           attributes: ["name"],
+          include: [ 
+            {
+              model: Pet,
+              attributes: ["name"], 
+            },
+          ],
         },
       ],
     });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
     // Serialize data so the template can read it
     const feeds = feedData.map((project) => feed.get({ plain: true }));
