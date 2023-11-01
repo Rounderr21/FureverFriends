@@ -1,5 +1,7 @@
 const router = require("express").Router();
+
 const { User, Pet } = require("../../models");
+
 const withAuth = require("../../utils/auth");
 
 // 1. Get a feed of all pet posts

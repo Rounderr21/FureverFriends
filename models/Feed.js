@@ -2,9 +2,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class UserPost extends Model {}
+class Feed extends Model {}
 
-UserPost.init(
+Feed.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -23,13 +23,13 @@ UserPost.init(
         isUrl: true,
       },
     },
-    user_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: "user",
-        key: "name",
-      },
-    },
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: "user",
+    //     key: "name",
+    //   },
+    // },
   },
   {
     sequelize,
@@ -40,4 +40,4 @@ UserPost.init(
   }
 );
 
-module.exports = User;
+module.exports = Feed;
