@@ -9,20 +9,15 @@ router.get("/", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
-          include: [ 
+          include: [
             {
               model: Pet,
-              attributes: ["name"], 
+              attributes: ["name"],
             },
           ],
         },
       ],
     });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
 
     // Serialize data so the template can read it
     const feeds = feedData.map((project) => feed.get({ plain: true }));
@@ -33,7 +28,7 @@ router.get("/", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ error: error.message });
   }
 });
 
