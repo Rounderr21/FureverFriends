@@ -11,6 +11,6 @@ Whether you're a seasoned horticulturalist or a budding plant lover, this app is
 leaves and blooms is understood and celebrated.`,
 ];
 
-app.get('/', (req, res) => {
-    res.render('index', data);
-});
+// app.get('/', (req, res) => {
+//     res.render('index', data);
+// });

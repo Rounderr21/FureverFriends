@@ -1,3 +1,5 @@
+//with feed route  of all posts esecially seeing the database
+
 const router = require("express").Router();
 const { UserPost } = require("../../models");
 const withAuth = require("../../utils/auth");
