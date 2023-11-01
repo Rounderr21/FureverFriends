@@ -1,16 +1,11 @@
 const data = [ 
-    title = "GreenShap",
-    header = "Welcome to GreenSnaps!",
-    subheader = "Your Green Oasis in the Digital World!",
-    description = `In a world that's more connected than ever, where social media platforms bring people together from all corners of the globe, 
-there's a thriving community waiting to blossom. Welcome to PlantGram, the app designed exclusively for the nature enthusiasts, the garden gurus, 
-and the plant parents who turn their homes into thriving botanical wonderlands.
+    title = "FureverFriends",
+    header = "Welcome to FureverFriends!",
+    subheader = "Where Love Finds a Home! 🐾",
+    description = `At FureverFriends, we're more than just a pet adoption website; 
+    we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human companions. 
+    Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
 
-GreenSnaps is not just another social network; it's a lush paradise dedicated to the green thumb in all of us. 
-Whether you're a seasoned horticulturalist or a budding plant lover, this app is your passport to a vibrant community where the language of 
-leaves and blooms is understood and celebrated.`,
+    Join us in making tails wag and hearts soar as we celebrate the joy of adoption. Together, let's make the world a better place, 
+    one 'Furever' home at a time. Start your adventure with us today, and together, let's create stories that will last a lifetime. 🏡🐾❤️`,
 ];
-
-// app.get('/', (req, res) => {
-//     res.render('index', data);
-// });
