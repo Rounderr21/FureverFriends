@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenSnaps Feed</title>
+    <title>ForeverFriends Feed</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,43 +15,43 @@
 
         <!-- Header -->
         <header class="text-center text-4xl mb-8">
-            <h1 class="font-bold text-headerColor border-b-2 border-headerBorder py-2">GreenSnaps</h1>
+            <h1 class="font-bold text-headerColor border-b-2 border-headerBorder py-2">ForeverFriends</h1>
         </header>
 
-        {{#each posts}}
-        <!-- Post Content -->
+        {{#each pets}}
+        <!-- Pet Content -->
         <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
 
-            <!-- Dynamic User Profile and Name -->
+            <!-- Dynamic Lister Profile and Name -->
             <div class="flex items-center mb-4">
-                <img src="{{this.user.profilePic}}" alt="Profile Picture" class="w-10 h-10 rounded-full mr-4">
-                <span class="text-lg font-semibold">{{this.user.username}}</span>
+                <img src="{{this.lister.profilePic}}" alt="Profile Picture" class="w-10 h-10 rounded-full mr-4">
+                <span class="text-lg font-semibold">{{this.lister.username}}</span>
             </div>
 
-            <!-- Dynamic Image -->
-            <img src="{{this.imagePath}}" alt="User Photo" class="w-full object-contain rounded-t-lg">
-            <p class="text-lg pt-4">{{this.caption}}</p>
+            <!-- Dynamic Pet Image -->
+            <img src="{{this.imagePath}}" alt="Pet Photo" class="w-full object-contain rounded-t-lg">
+            <p class="text-lg pt-4">{{this.description}}</p>
 
-            <!-- Dynamic Comments -->
-            <h2 class="text-2xl mt-6 mb-4 text-headerColor border-b-2 border-headerBorder py-2">Comments</h2>
-            {{#each this.comments}}
+            <!-- Dynamic Inquiries or Comments -->
+            <h2 class="text-2xl mt-6 mb-4 text-headerColor border-b-2 border-headerBorder py-2">Inquiries</h2>
+            {{#each this.inquiries}}
             <div class="flex items-center mt-2">
-                <img src="{{this.user.profilePic}}" alt="Commenter Profile Picture" class="w-6 h-6 rounded-full mr-2">
+                <img src="{{this.user.profilePic}}" alt="Inquirer Profile Picture" class="w-6 h-6 rounded-full mr-2">
                 <p class="text-lg">{{this.user.username}}: {{this.text}}</p>
             </div>
             {{/each}}
-            
-            <!-- Comment Form -->
-            <form action="/post-comment" method="POST" class="mt-4">
-                <textarea name="comment" class="w-full p-2 rounded" placeholder="Add a comment..."></textarea>
-                <button type="submit" class="mt-2 bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Post</button>
+
+            <!-- Inquiry Form -->
+            <form action="/post-inquiry" method="POST" class="mt-4">
+                <textarea name="inquiry" class="w-full p-2 rounded" placeholder="Ask about the pet..."></textarea>
+                <button type="submit" class="mt-2 bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Send Inquiry</button>
             </form>
         </div>
         {{/each}}
 
-        <!-- Actions (Upload & Logout) -->
+        <!-- Actions (List Pet & Logout) -->
         <div class="flex justify-between mb-6">
-            <button class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Upload</button>
+            <button class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
             <button class="bg-secondaryAction px-4 py-2 rounded-full text-textColor shadow-md">Logout</button>
         </div>
 
