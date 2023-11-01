@@ -1,7 +1,7 @@
 //with feed route  of all posts esecially seeing the database
 
 const router = require("express").Router();
-const { UserPost } = require("../../models");
+const { UserPost } = require("../../models/Feed");
 const withAuth = require("../../utils/auth");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });//had to be in the database
