@@ -1,18 +1,25 @@
 const sequelize = require("../config/connection");
-const { User, Pet, Feed } = require("../models");
+const { User, Pet } = require("../models");
 
 const userData = require("./userData.json");
 const petData = require("./petData.json");
-const feedData = require("./feedData.json");
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  try {
+    await sequelize.sync({ force: true });
 
-  await userData();
-  await petData();
-  await feedData();
+    // Insert user data
+    await User.bulkCreate(userData);
 
-  process.exit(0);
+    // Insert pet data
+    await Pet.bulkCreate(petData);
+
+    console.log("Data seeded successfully!");
+  } catch (error) {
+    console.error("Error seeding data:", error);
+  } finally {
+    process.exit(0);
+  }
 };
 
 seedAll();

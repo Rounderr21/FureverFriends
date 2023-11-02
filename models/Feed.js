@@ -1,4 +1,4 @@
-//put pet up for adoption
+// put pet up for adoption
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
@@ -23,20 +23,20 @@ Feed.init(
         isUrl: true,
       },
     },
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: "user",
-    //     key: "name",
-    //   },
-    // },
+    user_name: {
+      type: DataTypes.STRING,
+      references: {
+        model: "User",
+        key: "name",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "userpost",
+    modelName: "Feed",
   }
 );
 

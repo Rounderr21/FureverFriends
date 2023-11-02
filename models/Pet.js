@@ -15,21 +15,52 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true,
     },
-    user_id: {
+    weight: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    user_name: {
+      type: DataTypes.STRING,
+      references: {
+        model: "User",
+        key: "name",
+      },
+    },
+    user_email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+      references: {
+        model: "User",
+        key: "email",
+      },
+    },
+    user_phone: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id'
-      }
-    }
+        model: "User",
+        key: "phone",
+      },
+    },
   },
   {
     sequelize,
@@ -42,7 +73,7 @@ Pet.init(
 
 Pet.associate = (models) => {
   Pet.belongsTo(models.User, {
-    foreignKey: 'user_id',
+    foreignKey: "user_id",
   });
 };
 
