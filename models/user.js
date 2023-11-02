@@ -30,11 +30,10 @@ User.init(
         len: [8],
       },
     },
-    profilePic: {
-      type: DataTypes.STRING,
+    phone: {
+      type: DataTypes.INTEGER,
       allowNull: true,
-      comment: 'URL to the profile picture'
-    }
+    },
   },
   {
     sequelize,
@@ -47,8 +46,8 @@ User.init(
 
 User.associate = (models) => {
   User.hasMany(models.Pet, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
   });
 };
 

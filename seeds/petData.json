@@ -1,13 +1,20 @@
-{
+[
+    {
     "name": "Fluffy",
-    "species": "cat",
-    "breed": "Persian",
     "age": 3,
-    "color": "white",
+    "type": "cat",
+    "breed": "Persian",
+    "description": "white",
     "weight": 8,
-    "owner": {
-        "name": "Megan",
-        "email": "megan@example.com",
-        "phone": "555-555-5555"
-    }
+    "user_id": 1
+},
+{
+    "name": "Scales",
+    "age": 1,
+    "type": "snake",
+    "breed": "Corn Snake",
+    "description": "Orange",
+    "weight": 1,
+    "user_id": 2
 }
+]

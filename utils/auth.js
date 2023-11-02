@@ -1,12 +1,11 @@
-//example would be
-
 const withAuth = (req, res, next) => {
-    if (!req.session.logged_in) {
-      res.redirect('/login');
-    } else {
-      next();
-    }
-  };
-  
-  module.exports = withAuth;
-  
+  if (!req.session.logged_in) {
+    // redirects user to login if not alread
+    res.redirect("/login");
+  } else {
+    // proceed to next middleware or route if the user is logged in
+    next();
+  }
+};
+
+module.exports = withAuth;
