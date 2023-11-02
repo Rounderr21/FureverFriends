@@ -14,6 +14,7 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -41,6 +42,19 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: "user",
+    indexes: [
+      {
+        unique: true,
+        fields: ["name"],
+      },
+      {
+        unique: true,
+        fields: ["email"],
+      },
+      {
+        fields: ["phone"],
+      },
+    ],
   }
 );
 

@@ -2,6 +2,18 @@ const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../utils/auth");
 
+router.get("/", async (req, res) => {
+  try {
+    const allPosts = await Pet.findAll({
+      include: [{ model: User, attributes: ["name", "profilePic"] }],
+    });
+
+    res.status(200).json(allPosts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get("/profile", withAuth, async (req, res) => {
   try {
