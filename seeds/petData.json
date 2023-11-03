@@ -6,7 +6,8 @@
     "breed": "Persian",
     "description": "white",
     "weight": 8,
-    "user_id": 1
+    "user_id": 1,
+    "user_email": "heather@gmail.com"
 },
 {
     "name": "Scales",
@@ -15,6 +16,7 @@
     "breed": "Corn Snake",
     "description": "Orange",
     "weight": 1,
-    "user_id": 2
+    "user_id": 2,
+    "user_email": "cody@aol.com"
 }
 ]

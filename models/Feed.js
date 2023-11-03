@@ -26,7 +26,7 @@ Feed.init(
     user_name: {
       type: DataTypes.STRING,
       references: {
-        model: "User",
+        model: "user",
         key: "name",
       },
     },
