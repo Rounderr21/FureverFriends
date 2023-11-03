@@ -14,10 +14,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/register", async (req,res)=>{
-        res.render("register");
-});
-
 // Use withAuth middleware to prevent access to route
 router.get("/profile", withAuth, async (req, res) => {
   try {
