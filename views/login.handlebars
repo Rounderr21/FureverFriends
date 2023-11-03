@@ -1,29 +1,51 @@
 
+<h2>Login</h2>
+
+<form class="form login-form">
+  <div class="form-group">
+    <label for="email-login">Email:</label>
+    <input class="form-input" type="text" id="email-login" />
+  </div>
+  <div class="form-group">
+    <label for="password-login">Password:</label>
+    <input class="form-input" type="password" id="password-login" />
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Login</button>
+  </div>
+</form>
+
+<script src="../public//js/login.js"></script>
+
+<div class="row"></div>
+ <div class="col-md-6">
+        <h2>Sign-up</h2>
+
+    <form class="form signup-form">
+     <div class="form-group">
+        <label for="name-signup">Name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Phone Number:</label>
+        <input class="form-input" type="text" id="phone-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Sign-up</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="/public/css/style.css">
-    </head>
-    
-    <body>
-        <h1>{{header}}</h1>
-        <p>{{subheader}}</p>
-        <p>{{description}}</p>
+<script src="../public/js/register.js"></script>
 
-        <!-- This is the login widget -->
-        <div id="login-widget">
-            <form class="login-form">
-                <label for="username">Email:</label>
-                <input type="text" id="username" name="Email"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
 
-        <!-- Include the index.js file -->
-        <script src="/./public/js/login.js"></script>
-    </body>

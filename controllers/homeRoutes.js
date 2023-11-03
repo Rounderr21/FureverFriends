@@ -5,7 +5,7 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const allPosts = await Pet.findAll({
-      include: [{ model: User, attributes: ["name", "profilePic"] }],
+      include: [{ model: User, attributes: ["name"] }],
     });
 
     res.status(200).json(allPosts);
