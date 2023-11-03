@@ -38,26 +38,26 @@ Pet.init(
     user_name: {
       type: DataTypes.STRING,
       references: {
-        model: "User",
+        model: "user",
         key: "name",
       },
     },
     user_email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         isEmail: true,
       },
       references: {
-        model: "User",
+        model: "user",
         key: "email",
       },
     },
     user_phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       references: {
-        model: "User",
+        model: "user",
         key: "phone",
       },
     },
