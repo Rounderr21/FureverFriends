@@ -6,7 +6,7 @@ const withAuth = require("../utils/auth");
 // Redirect to profile if logged in, or show the login page if not
 router.get("/", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/feed");
   } else {
     res.render("login");
 
