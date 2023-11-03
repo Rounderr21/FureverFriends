@@ -32,10 +32,7 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const validPassword = await bcrypt.compare(
-      req.body.password,
-      userData.password
-    );
+    const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: "Login failed. Please try again!" });
