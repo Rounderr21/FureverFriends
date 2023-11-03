@@ -43,7 +43,7 @@ User.init(
       allowNull: true,
     },
   },
-  {  hooks: {
+  { hooks: {
     beforeCreate: async (newUserData) => {
       newUserData.password = await bcrypt.hash(newUserData.password, 10);
       return newUserData;
@@ -52,8 +52,8 @@ User.init(
       updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
       return updatedUserData;
     },
-
-    sequelize,
+  },
+  sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
@@ -70,8 +70,7 @@ User.init(
       {
         fields: ["phone"],
       },
-    ],
-  }
+    ]
   }
 );
 
