@@ -1,11 +1,27 @@
-const data = [ 
-    title = "FureverFriends",
-    header = "Welcome to FureverFriends!",
-    subheader = "Where Love Finds a Home! 🐾",
-    description = `At FureverFriends, we're more than just a pet adoption website; 
-    we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human companions. 
-    Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
-
-    Join us in making tails wag and hearts soar as we celebrate the joy of adoption. Together, let's make the world a better place, 
-    one 'Furever' home at a time. Start your adventure with us today, and together, let's create stories that will last a lifetime. 🏡🐾❤️`,
-];
+const loginFormHandler = async (event) => {
+    event.preventDefault();
+  
+    // Collect values from the login form
+    const email = document.querySelector('#username').value.trim();
+    const password = document.querySelector('#password').value.trim();
+  
+    if (email && password) {
+      // Send a POST request to the API endpoint
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/dashboard');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
