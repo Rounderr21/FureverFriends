@@ -5,7 +5,7 @@ const withAuth = require("../utils/auth");
 
 // Redirect to profile if logged in, or show the login page if not
 router.get("/", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/feed");
   } else {
     res.render("login");
@@ -31,7 +31,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
     res.render("profile", {
       ...user,
-      logged_in: true
+      loggedIn: true
     });
   } catch (err) {
     res.status(500).json(err);
