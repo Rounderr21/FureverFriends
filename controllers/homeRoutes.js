@@ -13,6 +13,12 @@ router.get("/", (req, res) => {
   }
 });
 
+//renders the feed page when the feed page is requested
+router.get("/feed", (req, res) => {
+  res.render("feed");
+});
+
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
