@@ -1,5 +1,5 @@
-const withAuth = (req, res, next) => {
-  if (!req.session.logged_in) {
+const withAuth = (req, res,next) => {
+  if (!req.session.loggedIn) {
     // redirects user to login if not alread
     res.redirect("/login");
   } else {

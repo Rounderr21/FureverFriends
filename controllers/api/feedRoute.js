@@ -2,14 +2,14 @@ const router = require("express").Router();
 const { User, Pet } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// 1. Get a feed of all pet posts
+1. //Get a feed of all pet posts
 router.get("/", withAuth, async (req, res) => {
   try {
     const allPosts = await Pet.findAll({
       include: [{ model: User, attributes: ["name", "profilePic"] }],
     });
 
-    res.status(200).json(allPosts);
+    res.status(200).json({allPosts, loggedIn: req.session.loggedIn});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -61,7 +61,7 @@ router.put("/:id", withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(updatedPost);
+    res.status(200).json({updatedPost, loggedIn: req.session.loggedIn});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -82,7 +82,7 @@ router.delete("/:id", withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(deletedPetPost);
+    res.status(200).json({deletedPetPost, loggedIn: req.session.loggedIn});
   } catch (err) {
     res.status(500).json(err);
   }
