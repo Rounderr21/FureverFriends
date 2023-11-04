@@ -4,8 +4,18 @@ const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const User = require("../../models/user");
 
+// TEMP GET ROUTE
+router.get("/", async (req, res) => {
+  try {
+    const dbUserData = await User.findAll();
+    res.status(200).json(dbUserData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
       name: req.body.name,
@@ -53,7 +63,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -62,6 +72,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
 
 module.exports = router;
