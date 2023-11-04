@@ -3,7 +3,7 @@ const { User, Pet } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // 1. Get a feed of all pet posts
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const allPosts = await Pet.findAll({
       include: [{ model: User, attributes: ["name"] }],
