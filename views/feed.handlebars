@@ -77,9 +77,10 @@
     </div>
     <!-- Pets Listing -->
     <div class="pets-container">
-        {{#each Pet}}
+        {{#each pet}}
+        <script>console.log(pet)</script>
         <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
-            <h2>{{this.name}}</h2>
+            <h2>Name: {{this.name}}</h2>
             <p>Type: {{this.type}}</p>
             <p>Breed: {{this.breed}}</p>
             <p>Description: {{this.description}}</p>
