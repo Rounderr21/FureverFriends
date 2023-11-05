@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FureverFriends Feed</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
-
 <body class="bg-pageBg text-textColor">
 
     <div class="container mx-auto p-6">
-
         <!-- Header -->
         <header class="text-center text-4xl mb-8">
-            <h1 class="font-bold text-headerColor border-b-2 border-headerBorder py-2">FureverFriends</h1>
+            <!-- Potential Header Content -->
         </header>
 
-        {{#each pets}}
-        <!-- Pet Content -->
-        <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
-
-            <!-- Dynamic Lister Profile and Name -->
-            <div class="flex items-center mb-4">
-                <img src="{{this.lister.profilePic}}" alt="Profile Picture" class="w-10 h-10 rounded-full mr-4">
-                <span class="text-lg font-semibold">{{this.lister.username}}</span>
-            </div>
-
-            <!-- Dynamic Pet Image -->
-            <img src="{{this.imagePath}}" alt="Pet Photo" class="w-full object-contain rounded-t-lg">
-            <p class="text-lg pt-4">{{this.description}}</p>
-
-            <!-- Dynamic Inquiries or Comments -->
-            <h2 class="text-2xl mt-6 mb-4 text-headerColor border-b-2 border-headerBorder py-2">Inquiries</h2>
-            {{#each this.inquiries}}
-            <div class="flex items-center mt-2">
-                <img src="{{this.user.profilePic}}" alt="Inquirer Profile Picture" class="w-6 h-6 rounded-full mr-2">
-                <p class="text-lg">{{this.user.username}}: {{this.text}}</p>
-            </div>
-            {{/each}}
-
-            <!-- Inquiry Form -->
-            <form action="/post-inquiry" method="POST" class="mt-4">
-                <textarea name="inquiry" class="w-full p-2 rounded" placeholder="Ask about the pet..."></textarea>
-                <button type="submit" class="mt-2 bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Send Inquiry</button>
+        <!-- List Pet Form (Initially hidden) -->
+        <div id="listPetForm" class="hidden">
+            <form action="/api/pets" method="POST" class="bg-white p-6 rounded shadow-md">
+                <h2 class="text-2xl mb-4">List a New Pet</h2>
+                <div>
+                    <label for="name">Pet Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full p-2 rounded">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required class="w-full p-2 rounded"></textarea>
+                </div>
+                <div>
+                    <label for="imagePath">Image URL:</label>
+                    <input type="text" id="imagePath" name="imagePath" required class="w-full p-2 rounded">
+                </div>
+                <button type="submit" class="mt-4 bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
             </form>
+        </div>
+
+        <!-- Pets Listing -->
+        {{#each pets}}
+        <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
+            <!-- Pet Content Here -->
         </div>
         {{/each}}
 
         <!-- Actions (List Pet & Logout) -->
         <div class="flex justify-between mb-6">
-            <button class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
+            <button id="showListPetForm" class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
             <button id="logout" class="bg-secondaryAction px-4 py-2 rounded-full text-textColor shadow-md">Logout</button>
         </div>
-
     </div>
+
+    <script>
+        // Show the 'List Pet' form when the 'List Pet' button is clicked
+        document.getElementById('showListPetForm').addEventListener('click', function() {
+            document.getElementById('listPetForm').classList.remove('hidden');
+        });
+    </script>
     <script src="/js/logout.js"></script>
 </body>
 </html>
