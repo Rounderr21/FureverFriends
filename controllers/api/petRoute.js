@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
       include: [{ model: User, attributes: ["name"] }],
     });
 
-    res.status(200).json({allPosts, loggedIn: req.session.loggedIn});
+    res.render("feedPage", { pets: allPosts, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -61,7 +61,7 @@ router.put("/:id", withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json({updatedPost, loggedIn: req.session.loggedIn});
+    res.status(200).json({ updatedPost, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -82,7 +82,7 @@ router.delete("/:id", withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json({deletedPetPost, loggedIn: req.session.loggedIn});
+    res.status(200).json({ deletedPetPost, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
