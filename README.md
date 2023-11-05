@@ -1,5 +1,25 @@
-This app is designed to help users keep track of their plants and ensure they are healthy and thriving. Users can add their plants to the app and set reminders for watering, fertilizing, and other care tasks. The app also provides information on common plant species and their care requirements.
+# FureverFriends Pet Adoption Network
+Where passionate people meet their pets.
 
-To get started, simply download the app and create an account. From there, you can add your plants and set reminders for care tasks. The app will send notifications when it's time to water or fertilize your plants, so you never forget an important task.
+## Who we are
+We wanted to create a space that focuses on the pets and not the business of pets. With our wishlist feature, we are hoping to connect pets to people and vice versa. We are also excited to create a community of pet lovers that will support one another in caring for these wonderful creatures.
 
-We hope you enjoy using the plant app and that it helps you keep your plants healthy and happy!
+## How to use our site
+
+Simply create a profile (we promise to never sell your info), and start creating your wishlist. Maybe you want to browse available pets. Maybe you just need a cute cat pic to brighten your day. Whatever it is, we are here for you.
+
+## What we learned
+
+In development, our group learned alot about routing and backend code. We can see the benefits to having a MVC style structure to the code. Roles could more clearly be set when you have such a big project to work on.
+
+Handlebars was a nice technology to learn but we probably wont use it again in the future. Tailwind CSS was a great way to style our page.
+
+using express-sessions and authentication helped us to secure the users profile, while bcrypt helped secure the stored login information. Learning this code will be extremely useful in future projects.
+
+## Deployed App
+
+[FureverFriends]()
+
+## Source Code
+
+No source code was provided. The group collaborated nicely, and evenly split up the work while supporting each other through the debugging process. Some code snippets from the UofO coding bootcamp activities were adopted to fit this project. 
