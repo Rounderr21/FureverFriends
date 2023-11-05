@@ -14,7 +14,7 @@
   
   <div class="w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md">
     <h2 class="text-2xl text-headerColor font-bold mb-6">Login</h2>
-    <form class="space-y-4">
+    <form class="space-y-4 login-form">
       <div>
         <label for="email-login" class="block text-textColor text-sm font-bold mb-2">Email:</label>
         <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="email-login" />
@@ -33,7 +33,7 @@
 
   <div class="w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md mt-8">
     <h2 class="text-2xl text-headerColor font-bold mb-6">Sign-up</h2>
-    <form class="space-y-4">
+    <form class="space-y-4 signup-form">
       <div>
         <label for="name-signup" class="block text-textColor text-sm font-bold mb-2">Name:</label>
         <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="name-signup" />
@@ -46,12 +46,9 @@
         <label for="password-signup" class="block text-textColor text-sm font-bold mb-2">Password:</label>
         <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="password" id="password-signup" />
       </div>
+   
       <div>
-        <label for="phone-signup" class="block text-textColor text-sm font-bold mb-2">Phone Number:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="phone-signup" />
-      </div>
-      <div>
-        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Sign-up</button>
+        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="submitBtn" type="submit">Sign-up</button>
       </div>
     </form>
   </div>

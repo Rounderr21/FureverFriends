@@ -54,13 +54,6 @@ Pet.init(
         key: "email",
       },
     },
-    user_phone: {
-      type: DataTypes.STRING,
-      references: {
-        model: "user",
-        key: "phone",
-      },
-    },
   },
   {
     sequelize,

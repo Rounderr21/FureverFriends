@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{name}}'s Profile</title>
     <!-- Add links to CSS files here -->
 </head>
+
 <body>
     <header>
         <!-- Navigation bar here -->
+        <nav>
+            <button class="no-button" id="logout">logout</button>
+        </nav>
     </header>
 
     <main>
         <h1>Welcome, {{name}}!</h1>
         <div class="profile-info">
             <p><strong>Email:</strong> {{email}}</p>
-            <p><strong>Phone:</strong> {{phone}}</p>
         </div>
 
         <!-- If you want to list the user's pets as well -->
         {{#if pets}}
-            <h2>{{name}}'s Pets</h2>
-            <ul class="pets-list">
-                {{#each pets}}
-                    <li>{{this.name}} - {{this.type}}</li>
-                {{/each}}
-            </ul>
+        <h2>{{name}}'s Pets</h2>
+        <ul class="pets-list">
+            {{#each pets}}
+            <li>{{this.name}} - {{this.type}}</li>
+            {{/each}}
+        </ul>
         {{else}}
-            <p>No pets listed.</p>
+        <p>No pets listed.</p>
         {{/if}}
 
     </main>
 
     <footer>
         <!-- Footer content here -->
+        &copy; 2023 FureverFriends. All rights reserved.
     </footer>
-    
+
     <script src="/js/logout.js"></script>
 </body>
+
 </html>
