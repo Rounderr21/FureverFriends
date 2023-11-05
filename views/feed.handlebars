@@ -1,55 +1,76 @@
-<div class="flex flex-col items-center justify-center min-h-screen bg-pageBg">
-  <div class="text-center mb-8">
-    <h1 class="text-4xl font-bold text-headerColor">
-      <span role="img" aria-label="cats and dogs">Welcome to <a href="/" class="text-actionColor hover:text-headerColor">FureverFriends!</a> </span>
-    </h1>
-    <p class="mt-2 text-lg text-headerColor">Where Love Finds a Home! 🐾</p>
-    <p class="mt-4 text-md text-textColor max-w-prose">
-      FureverFriends, we're more than just a pet adoption website; 
-      we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human companions.
-      Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
-      ...
-    </p>
-  </div>
-  
-  <div class="w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md">
-    <h2 class="text-2xl text-headerColor font-bold mb-6">Login</h2>
-    <form class="space-y-4 login-form">
-      <div>
-        <label for="email-login" class="block text-textColor text-sm font-bold mb-2">Email:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="email" id="email-login" required />
-      </div>
-      <div>
-        <label for="password-login" class="block text-textColor text-sm font-bold mb-2">Password:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="password" id="password-login" required />
-      </div>
-      <div>
-        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Login</button>
-      </div>
-    </form>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FureverFriends Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-pageBg text-textColor">
 
-  <div class="mt-8 w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md">
-    <h2 class="text-2xl text-headerColor font-bold mb-6">Sign-up</h2>
-    <form class="space-y-4 signup-form">
-      <div>
-        <label for="name-signup" class="block text-textColor text-sm font-bold mb-2">Name:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="name-signup" required />
-      </div>
-      <div>
-        <label for="email-signup" class="block text-textColor text-sm font-bold mb-2">Email:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="email" id="email-signup" required />
-      </div>
-      <div>
-        <label for="password-signup" class="block text-textColor text-sm font-bold mb-2">Password:</label>
-        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="password" id="password-signup" required />
-      </div>
-      <div>
-        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Sign-up</button>
-      </div>
+    <div class="container mx-auto p-6">
+        <!-- Header -->
+        <header class="text-center text-4xl mb-8">
+            <!-- Potential Header Content -->
+        </header>
+
+        <!-- List Pet Form (Initially hidden) -->
+       <div id="listPetForm" class="hidden">
+    <form action="/api/pets" method="POST" class="bg-white p-6 rounded shadow-md">
+        <h2 class="text-2xl mb-4">List a New Pet</h2>
+        <div>
+            <label for="name">Pet Name:</label>
+               <input type="text" id="name" name="name" required class="w-full p-2 rounded">
+        </div>
+        <div>
+            <label for="age">Age:</label>
+           <input type="number" id="age" name="age" min="1" required class="w-full p-2 rounded">
+        </div>
+        <div>
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" required class="w-full p-2 rounded">
+        </div>
+        <div>
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required class="w-full p-2 rounded">
+        </div>
+        <div>
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" name="weight" min="1" required class="w-full p-2 rounded">
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="w-full p-2 rounded"></textarea>
+        </div>
+        <div>
+            <label for="user_email">Your Email:</label>
+            <input type="email" id="user_email" name="user_email" required class="w-full p-2 rounded">
+        </div>
+        <!-- Add any other necessary fields -->
+        <button type="submit" class="mt-4 bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
     </form>
-  </div>
 </div>
+        <!-- Pets Listing -->
+        {{#each pets}}
+        <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
+            <!-- Pet Content Here -->
+        </div>
+        {{/each}}
 
-<script src="/js/login.js"></script>
-<script src="/js/register.js"></script>
+        <!-- Actions (List Pet & Logout) -->
+        <div class="flex justify-between mb-6">
+            <button id="showListPetForm" class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">List Pet</button>
+            <button id="logout" class="bg-secondaryAction px-4 py-2 rounded-full text-textColor shadow-md">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Show the 'List Pet' form when the 'List Pet' button is clicked
+        document.getElementById('showListPetForm').addEventListener('click', function() {
+            document.getElementById('listPetForm').classList.remove('hidden');
+        });
+    </script>
+    <script src="/js/logout.js"></script>
+</body>
+</html>
