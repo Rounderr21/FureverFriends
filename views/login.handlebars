@@ -1,60 +1,61 @@
-    <h1>
-        <span role="img">🐱Welcome to <a href="/">FureverFriends!</a> 🐶</span>
-      </h1>
-      <p>Where Love Finds a Home! 🐾</p>
-    <p>FureverFriends, we're more than just a pet adoption website; 
-    we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human companions. 
-    Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
-
-    Join us in making tails wag and hearts soar as we celebrate the joy of adoption. Together, let's make the world a better place, 
-    one 'Furever' home at a time. Start your adventure with us today, and together, let's create stories that will last a lifetime. 🏡🐾❤️</p>
-<h2>Login</h2>
-
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">Email:</label>
-    <input class="form-input" type="text" id="email-login" />
+<div class="flex flex-col items-center justify-center min-h-screen bg-pageBg">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold text-headerColor">
+      <span role="img" aria-label="cats and dogs">Welcome to <a href="/" class="text-actionColor hover:text-headerColor">FureverFriends!</a> </span>
+    </h1>
+    <p class="mt-2 text-lg text-headerColor">Where Love Finds a Home! 🐾</p>
+    <p class="mt-4 text-md text-textColor max-w-prose">
+      FureverFriends, we're more than just a pet adoption website; 
+      we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human companions.
+      Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
+      ...
+    </p>
   </div>
-  <div class="form-group">
-    <label for="password-login">Password:</label>
-    <input class="form-input" type="password" id="password-login" />
+  
+  <div class="w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md">
+    <h2 class="text-2xl text-headerColor font-bold mb-6">Login</h2>
+    <form class="space-y-4">
+      <div>
+        <label for="email-login" class="block text-textColor text-sm font-bold mb-2">Email:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="email-login" />
+      </div>
+      <div>
+        <label for="password-login" class="block text-textColor text-sm font-bold mb-2">Password:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="password" id="password-login" />
+      </div>
+      <div>
+        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Login</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">Login</button>
-  </div>
-</form>
 
-<script src="/js/login.js"></script>
+  <div class="row mt-8"></div>
 
-<div class="row"></div>
- <div class="col-md-6">
-        <h2>Sign-up</h2>
-
-    <form class="form signup-form">
-     <div class="form-group">
-        <label for="name-signup">Name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+  <div class="w-full max-w-md p-8 bg-cardBg rounded-lg shadow-md mt-8">
+    <h2 class="text-2xl text-headerColor font-bold mb-6">Sign-up</h2>
+    <form class="space-y-4">
+      <div>
+        <label for="name-signup" class="block text-textColor text-sm font-bold mb-2">Name:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="name-signup" />
       </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+      <div>
+        <label for="email-signup" class="block text-textColor text-sm font-bold mb-2">Email:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="email-signup" />
       </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
+      <div>
+        <label for="password-signup" class="block text-textColor text-sm font-bold mb-2">Password:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="password" id="password-signup" />
       </div>
-      <div class="form-group">
-        <label for="password-signup">Phone Number:</label>
-        <input class="form-input" type="text" id="phone-signup" />
+      <div>
+        <label for="phone-signup" class="block text-textColor text-sm font-bold mb-2">Phone Number:</label>
+        <input class="form-input w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-actionColor" type="text" id="phone-signup" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Sign-up</button>
+      <div>
+        <button class="w-full bg-actionColor hover:bg-headerColor text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Sign-up</button>
       </div>
     </form>
   </div>
 </div>
 
-
+<script src="/js/login.js"></script>
 <script src="/js/register.js"></script>
-
-
