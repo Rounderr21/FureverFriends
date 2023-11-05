@@ -8,8 +8,8 @@ router.get("/", async (req, res) => {
     const allPosts = await Pet.findAll({
       include: [{ model: User, attributes: ["name"] }],
     });
-
-    res.render("feedPage", { pets: allPosts, loggedIn: req.session.loggedIn });
+    console.log(allPosts);
+    res.render("feed", { Pet: allPosts, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
