@@ -36,10 +36,6 @@ User.init(
         len: [8],
       },
     },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
   },
   {
     hooks: {
@@ -68,9 +64,6 @@ User.init(
       {
         unique: true,
         fields: ["email"],
-      },
-      {
-        fields: ["phone"],
       },
     ],
   }
