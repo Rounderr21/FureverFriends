@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🐱 FureverFriends 🐶</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>Welcome to FureverFriends!</h1>
-      <p>Where Love Finds a Home! 🐾</p>
-      <p>FureverFriends, we're more than just a pet adoption website;
-        we're a community of passionate pet lovers dedicated to connecting deserving animals with their perfect human
-        companions.
-        Our mission is simple: to unite the hearts of pets and people, creating bonds that last a lifetime.
-
-        Join us in making tails wag and hearts soar as we celebrate the joy of adoption. Together, let's make the world
-        a better place,
-        one 'Furever' home at a time. Start your adventure with us today, and together, let's create stories that will
-        last a lifetime. 🏡🐾❤️</p>
-      <h1>
-        <span role="img">🐱🐶</span>
-        <a href="/">FureverFriends</a>
-      </h1>
-      <nav>
+<body class="bg-pageBg text-textColor">
+  <div class="container mx-auto p-6">
+    <header class="text-center text-4xl mb-8">
+      <h1 class="font-bold text-headerColor border-b-2 border-headerBorder py-2">🐱 FureverFriends 🐶</h1>
+      <nav class="flex justify-center mt-4">
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        {{#if loggedIn}}
+        <a href="/profile" class="text-lg text-headerColor hover:text-actionColor mr-4">Profile</a>
+        <button id="logout" class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Logout</button>
         {{/if}}
       </nav>
     </header>
-
-    <main class="container container-fluid mt-5">
+    <main>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-
-    <footer>&copy; 2023 FureverFriends. All rights reserved.
-    </footer>
+    <footer class="text-center text-textColor mt-6 py-4 border-t-2 border-headerBorder">&copy; 2023 FureverFriends. All rights reserved.</footer>
   </div>
+  <!-- Render script for logged in users only -->
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
-
 </html>
