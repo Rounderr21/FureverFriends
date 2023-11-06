@@ -4,35 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{name}}'s Profile</title>
+    <title>{{user.name}}'s Profile</title>
     <!-- Add links to CSS files here -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header>
         <!-- Navigation bar here -->
         <nav>
-            <button class="no-button" id="logout">logout</button>
+            <button class="no-button" id="logout">Logout</button>
         </nav>
     </header>
 
     <main>
-        <h1>Welcome, {{name}}!</h1>
+        <h1>Welcome, {{user.name}}!</h1>
         <div class="profile-info">
-            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Email:</strong> {{user.email}}</p>
         </div>
 
         <!-- If you want to list the user's pets as well -->
-        {{#if pet}}
-        <h2>{{name}}'s Pets</h2>
-        <ul class="pets-list">
-            {{#each pet}}
-            <li>{{this.name}} - {{this.type}}</li>
-            {{/each}}
-        </ul>
-        {{else}}
-        <p>No pets listed.</p>
-        {{/if}}
+        <section class="pets-section">
+            <h2>{{user.name}}'s Pets</h2>
+            {{#if user.pets}}
+            <ul class="pets-list">
+                {{#each user.pets}}
+                <li>
+                    <span class="pet-name">{{this.name}}</span> - <span class="pet-type">{{this.type}}</span>
+                    <!-- You can add more details here -->
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+            <p>No pets listed.</p>
+            {{/if}}
+        </section>
 
     </main>
 
