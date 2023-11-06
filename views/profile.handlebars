@@ -23,10 +23,10 @@
         </div>
 
         <!-- If you want to list the user's pets as well -->
-        {{#if pets}}
+        {{#if pet}}
         <h2>{{name}}'s Pets</h2>
         <ul class="pets-list">
-            {{#each pets}}
+            {{#each pet}}
             <li>{{this.name}} - {{this.type}}</li>
             {{/each}}
         </ul>
