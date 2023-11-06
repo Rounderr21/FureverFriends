@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Heather",
+    "email": "heather@gmail.com",
+    "password": "password123",
+    "phone": 3012231111
+  },
+  {
+    "name": "Cody",
+    "email": "cody@aol.com",
+    "password": "123password",
+    "phone": 9012340987
+  },
+  {
+    "name": "Brock",
+    "email": "brock@yahoo.com",
+    "password": "pass123word",
+    "phone": 97187654321
+  },
+  {
+    "name": "Tory",
+    "email": "tory@mac.com",
+    "password": "12password3",
+    "phone": 5038879917
+  }
+]
