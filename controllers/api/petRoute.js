@@ -5,15 +5,18 @@ const withAuth = require("../../utils/auth");
 // 1. Get a feed of all pet posts
 router.get("/", async (req, res) => {
   try {
-    const allPosts = await Pet.findAll({
-      include: [{ model: User, attributes: ["name"] }],
+    const allPets = await Pet.findAll({
+      include: [{ model: User, attributes: ["name"] }]
     });
-    console.log(allPosts);
-    res.render("feed", { Pet: allPosts, loggedIn: req.session.loggedIn });
+    const plainData = allPets.map(pet => pet.get({ plain: true }));
+    console.log("All posts (plain):", plainData);
+    res.json(plainData);
   } catch (err) {
+    console.error("Error fetching posts:", err);
     res.status(500).json(err);
   }
 });
+
 
 // 2. Get a single pet post by its ID
 router.get("/:id", async (req, res) => {
