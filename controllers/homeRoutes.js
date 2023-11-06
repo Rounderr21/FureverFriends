@@ -33,7 +33,7 @@ router.get("/profile", withAuth, async (req, res) => {
   console.log(req.session.user_id);
   try {
     const userData = await User.findByPk(req.session.user_id, {
-      include: [{ model: Pet, attributes: ["name","age", "type", "breed","weight", "image_url"] }],
+      include: [{ model: Pet, attributes: ["name","age", "type", "breed","weight", "description", "image_url"] }],
       attributes: ["name", "email"],
     });
 
