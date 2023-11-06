@@ -83,23 +83,22 @@
         </form>
     </div>
     <!-- Pets Listing -->
-    <div class="pets-container">
+   <div class="pets-container">
         {{#each pet}}
         <script>console.log(pet)</script>
-       <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg flex flex-col justify-center text-center">
-    <img src="{{ this.image_url }}" alt="{{ this.name }} Image" class="mx-auto"> <!-- Added mx-auto for centering -->
-    <h2>Name: {{ this.name }}</h2>
-    <p>Type: {{ this.type }}</p>
-    <p>Breed: {{ this.breed }}</p>
-    <p>Description: {{ this.description }}</p>
-</div>
+            <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg flex flex-col justify-center text-center">
+            <img src="{{ this.image_url }}" alt="{{ this.name }} Image">
+            <h2>Name: {{this.name}}</h2>
+            <p>Type: {{this.type}}</p>
+            <p>Breed: {{this.breed}}</p>
+            <p>Description: {{this.description}}</p>
+        </div>
         {{else}}
         <center>
             <p>No pets found.</p>
         </center>
         {{/each}}
     </div>
-
 </body>
 
 </html>
