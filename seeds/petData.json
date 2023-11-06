@@ -2,20 +2,22 @@
     {
     "name": "Fluffy",
     "age": 3,
-    "type": "cat",
+    "type": "Cat",
     "breed": "Persian",
-    "description": "white",
+    "description": "White",
     "weight": 8,
+    "image_url": "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=1080",
     "user_id": 1,
     "user_email": "heather@gmail.com"
 },
 {
     "name": "Scales",
     "age": 1,
-    "type": "snake",
+    "type": "Snake",
     "breed": "Corn Snake",
     "description": "Orange",
     "weight": 1,
+    "image_url": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_700/MTk3MDE5MTc4Njk0MDkyNDI4/introduction-to-keeping-corn-snakes-as-pets.webp",
     "user_id": 2,
     "user_email": "cody@aol.com"
 }
