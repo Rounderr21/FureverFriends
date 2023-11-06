@@ -6,9 +6,9 @@ const withAuth = require("../../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const allPets = await Pet.findAll({
-      include: [{ model: User, attributes: ["name"] }]
+      include: [{ model: User, attributes: ["name"] }],
     });
-    const plainData = allPets.map(pet => pet.get({ plain: true }));
+    const plainData = allPets.map((pet) => pet.get({ plain: true }));
     console.log("All posts (plain):", plainData);
     res.json(plainData);
   } catch (err) {
@@ -16,7 +16,6 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // 2. Get a single pet post by its ID
 router.get("/:id", async (req, res) => {
@@ -45,6 +44,16 @@ const petImages = {
   bird: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsVDV2UUDrNsjXXEihOlFHAIPAiuWb9U23oA&usqp=CAU",
   fish: "https://media.cnn.com/api/v1/images/stellar/prod/210713100916-03-giant-goldfish-minnesota.jpg?q=w_2100,h_1500,x_0,y_0,c_fill",
   cow: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO6fM2dK40vM-PV09ZP2nd6R-TF4JQ9pgWNA&usqp=CAU",
+  snake: "https://image.petmd.com/files/styles/978x550/public/cornsnake.gif",
+  horse:
+    "https://ichef.bbci.co.uk/news/640/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg",
+  rabbit:
+    "https://www.caldervets.co.uk/images/pet-care/rabbits/rabbits-dental-care-for-rabbits-01.jpg",
+  lizard:
+    "https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk2OTk1MDI2MjEzOTM4OTQ5/how-to-make-a-house-for-your-pet-lizard.png",
+  pig: "https://gray-kgns-prod.cdn.arcpublishing.com/resizer/7TQNbpweIwvHhRca4Zkx3MfYJUY=/1200x900/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/25PMUXFLVJCI5NKG37FPCCXQIY.jpg",
+  hedgehog:
+    "https://vetmed.illinois.edu/wp-content/uploads/2021/04/pc-keller-hedgehog.jpg",
 
   // More mappings...
 };
@@ -56,7 +65,8 @@ router.post("/", withAuth, async (req, res) => {
     const petType = req.body.type;
 
     // Find the image URL based on the pet type, or use a default image URL
-    const imageUrl = petImages[petType.toLowerCase()] || 'https://example.com/default.jpg';
+    const imageUrl =
+      petImages[petType.toLowerCase()] || "https://example.com/default.jpg";
 
     // Include the image URL in the data to be stored for the new pet post
     const newPetData = {
