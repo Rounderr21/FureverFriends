@@ -80,6 +80,7 @@
         {{#each pet}}
         <script>console.log(pet)</script>
         <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
+            <img src="{{ this.image_url }}" alt="{{ this.name }} Image">
             <h2>Name: {{this.name}}</h2>
             <p>Type: {{this.type}}</p>
             <p>Breed: {{this.breed}}</p>
