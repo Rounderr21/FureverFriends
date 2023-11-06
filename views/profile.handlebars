@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,8 @@
     <header>
         <nav class="flex justify-between items-center p-6">
             <a href="/feed" class="bg-actionColor px-4 py-2 rounded-full text-white shadow-md">Feed</a>
-            <button class="bg-secondaryAction px-4 py-2 rounded-full text-textColor shadow-md" id="logout">Logout</button>
+            <button class="bg-secondaryAction px-4 py-2 rounded-full text-textColor shadow-md"
+                id="logout">Logout</button>
         </nav>
     </header>
 
@@ -24,36 +26,32 @@
 
         <!-- If you want to list the user's pets as well -->
         <section class="pets-section">
-    <h2>{{user.name}}'s Pets</h2>
-    {{#if user.pets}}
-    <ul class="pets-list">
-        {{#each user.pets}}
-        <li class="mb-4">
-            <div class="pet-item p-4 bg-white rounded shadow">
-                <img src="{{this.image_url}}" alt="{{this.name}}" class="w-32 h-32 object-cover rounded-full mx-auto">
-                <div class="pet-info mt-2 text-center">
-                    <span class="pet-name block font-bold">{{this.name}}</span>
-                    <span class="pet-type block italic">{{this.type}}</span>
-                    <span class="pet-age block">Age: {{this.age}}</span>
-                    <span class="pet-breed block">Breed: {{this.breed}}</span>
-                    <span class="pet-weight block">Weight: {{this.weight}} lbs</span>
-                    <span class="pet-description block mt-2">{{this.description}}</span>
-                </div>
-            </div>
-        </li>
-        {{/each}}
-    </ul>
-    {{else}}
-    <p>No pets listed.</p>
-    {{/if}}
-</section>
+            <h2>{{user.name}}'s Pets</h2>
+            {{#if user.pets}}
+            <ul class="pets-list">
+                {{#each user.pets}}
+                <li class="mb-4">
+                    <div class="pet-item p-4 bg-white rounded shadow">
+                        <img src="{{this.image_url}}" alt="{{this.name}}"
+                            class="w-32 h-32 object-cover rounded-full mx-auto">
+                        <div class="pet-info mt-2 text-center">
+                            <span class="pet-name block font-bold">{{this.name}}</span>
+                            <span class="pet-type block italic">{{this.type}}</span>
+                            <span class="pet-age block">Age: {{this.age}}</span>
+                            <span class="pet-breed block">Breed: {{this.breed}}</span>
+                            <span class="pet-weight block">Weight: {{this.weight}} lbs</span>
+                            <span class="pet-description block mt-2">{{this.description}}</span>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+            <p>No pets listed.</p>
+            {{/if}}
+        </section>
 
     </main>
-
-    <footer>
-        <!-- Footer content here -->
-        &copy; 2023 FureverFriends. All rights reserved.
-    </footer>
 
     <script src="/js/logout.js"></script>
 </body>

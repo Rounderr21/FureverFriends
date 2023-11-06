@@ -43,7 +43,7 @@ const petImages = {
   cat: "https://www.dutch.com/cdn/shop/articles/shutterstock_538333303.jpg?v=1683242960&width=1080",
   bird: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsVDV2UUDrNsjXXEihOlFHAIPAiuWb9U23oA&usqp=CAU",
   fish: "https://media.cnn.com/api/v1/images/stellar/prod/210713100916-03-giant-goldfish-minnesota.jpg?q=w_2100,h_1500,x_0,y_0,c_fill",
-  cow: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO6fM2dK40vM-PV09ZP2nd6R-TF4JQ9pgWNA&usqp=CAU",
+  cow: "https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg",
   snake: "https://image.petmd.com/files/styles/978x550/public/cornsnake.gif",
   horse:
     "https://ichef.bbci.co.uk/news/640/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg",
@@ -51,7 +51,7 @@ const petImages = {
     "https://www.caldervets.co.uk/images/pet-care/rabbits/rabbits-dental-care-for-rabbits-01.jpg",
   lizard:
     "https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk2OTk1MDI2MjEzOTM4OTQ5/how-to-make-a-house-for-your-pet-lizard.png",
-  pig: "https://gray-kgns-prod.cdn.arcpublishing.com/resizer/7TQNbpweIwvHhRca4Zkx3MfYJUY=/1200x900/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/25PMUXFLVJCI5NKG37FPCCXQIY.jpg",
+  pig: "https://i.natgeofe.com/k/0ed36c42-672a-425b-9e62-7cc946b98051/pig-fence_square.jpg",
   hedgehog:
     "https://vetmed.illinois.edu/wp-content/uploads/2021/04/pc-keller-hedgehog.jpg",
 
