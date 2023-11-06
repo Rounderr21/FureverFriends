@@ -83,7 +83,7 @@
     <div class="pets-container">
         {{#each pet}}
         <script>console.log(pet)</script>
-        <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg">
+            <div class="mb-6 p-4 bg-cardBg rounded-lg shadow-lg flex flex-col justify-center text-center">
             <img src="{{ this.image_url }}" alt="{{ this.name }} Image">
             <h2>Name: {{this.name}}</h2>
             <p>Type: {{this.type}}</p>
