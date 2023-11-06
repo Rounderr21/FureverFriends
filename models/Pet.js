@@ -35,6 +35,10 @@ Pet.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    image_url: {
+      type: DataTypes.STRING, // Store the image URL as a string to pull it out in the handlebars template
+      allowNull: true,
+    },
     user_name: {
       type: DataTypes.STRING,
       references: {
