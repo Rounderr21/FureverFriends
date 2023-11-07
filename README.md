@@ -2,7 +2,7 @@
 Where passionate people meet their pets.
 
 ## Who we are
-We wanted to create a space that focuses on the pets and not the business of pets. With our wishlist feature, we are hoping to connect pets to people and vice versa. We are also excited to create a community of pet lovers that will support one another in caring for these wonderful creatures.
+We wanted to create a space that focuses on the pets and not the business of pets. With our soon to come wishlist feature, we are hoping to connect pets to people and vice versa. We are also excited to create a community of pet lovers that will support one another in caring for these wonderful creatures.
 
 ## How to use our site
 
