@@ -18,7 +18,14 @@ using express-sessions and authentication helped us to secure the users profile,
 
 ## Deployed App
 
-[FureverFriends]()
+[FureverFriends](https://pure-scrubland-49342-080c7f0b82aa.herokuapp.com/)
+
+## Screenshots
+Homepage:
+![Homepage](./public/images/homepage.jpg)
+
+Profile:
+![profile](./public/images/profile.jpg)
 
 ## Source Code
 
