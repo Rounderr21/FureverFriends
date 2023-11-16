@@ -6,7 +6,25 @@ We wanted to create a space that focuses on the pets and not the business of pet
 
 ## How to use our site
 
-Simply create a profile (we promise to never sell your info), and start creating your wishlist. Maybe you want to browse available pets. Maybe you just need a cute cat pic to brighten your day. Whatever it is, we are here for you.
+Using FureverFriends is incredibly simple. If you have not created a profile, fill out the signup form with your name, email, and desired password and  then click sign-up. If you already have a login, enter your email and password and click login. Once you login you will be redirected to the feed page where you will see a list of amazing pets available. On the top of the page you will see an option to list a pet, go to your profile, or logout.
+
+The list a pet option will bring you to a form that allows you to enter details about the animal you would like to rehome to a loving family. You will be asked details such as the pets name, age, type and breed, weight, and description. Please use the description box to describe the pets personality as well as the best way to get in contact with you for a smooth re-homing process. Please note that your email must be the same email as the one you login with. This is a verification to make sure no one lists scam pets under your name.
+
+Your profile is your home on our site. You will see your name, registered email, and the pet's you have listed for sale. There will be an option to return to the feed page or to logout.
+
+It is as simple as that. Our site is dedicated to remaining intuitive and simple to use. That does'nt mean we don't have some incredible updates coming soon, so keep on the look out for those!
+
+## Installation
+
+There is no installation necessary to enjoy our site. Simply visit the link below and enjoy the web based application. We hope soon you will be able to find us in your app store for a seamless mobile experience too.
+
+## Upcoming Features
+
+There are so many great things in the works. Here are some upcoming features we are excited about:
+- We are working on a mobile app so you can enjoy FureverFriends on the go.
+- A wishlist for your profile will soon allow you to post pets your looking for.
+- We hope to create a more engaging network, giving you ways to communicate with other pet lovers.
+- We are looking for a way to integrate with shelters local to your area so they are able to return lost pets and re-home animals to loving families.
 
 ## What we learned
 
