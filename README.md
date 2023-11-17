@@ -26,6 +26,18 @@ There are so many great things in the works. Here are some upcoming features we 
 - We hope to create a more engaging network, giving you ways to communicate with other pet lovers.
 - We are looking for a way to integrate with shelters local to your area so they are able to return lost pets and re-home animals to loving families.
 
+## Technologies
+
+We used the following technologies and frameworks on this project:
+- Handlebars
+- Javascript
+- Express
+- Express Sessions
+- Mysql
+- Sequelize
+- Tailwind Framework
+- MVC File Structure
+
 ## What we learned
 
 In development, our group learned alot about routing and backend code. We can see the benefits to having a MVC style structure to the code. Roles could more clearly be set when you have such a big project to work on.
